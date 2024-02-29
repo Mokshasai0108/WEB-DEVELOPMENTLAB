@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide Image</title>
+    <style>
+        #imageContainer {
+            display: none; /* Initially hide the image */
+        }
+    </style>
+    <script>
+        function toggleImage() {
+            var imageContainer = document.getElementById("imageContainer");
+            var image = document.getElementById("myImage");
+
+            if (imageContainer.style.display === "none") {
+                imageContainer.style.display = "block"; // Show the image container
+                image.src = "https://placekitten.com/200/300"; // Set the image source if needed
+            } else {
+                imageContainer.style.display = "none"; // Hide the image container
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Show/Hide Image Example</h1>
+
+    <div id="imageContainer">
+        <img id="myImage" src="https://placekitten.com/200/300" alt="(my cat)">
+    </div>
+
+    <button onclick="toggleImage()">Toggle Image</button>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head><title>Array Operations</title></head>
+<body>
+<p id="output"></p>
+<script>
+    // Original Array
+    var originalArray = [1, 3, 2, 4];
+    document.getElementById("output").innerHTML += "<b><u>Given Array: </u></b>" + originalArray + "<br>";
+
+    // A. Using length
+    document.getElementById("output").innerHTML += "<b><u>Array Length: </u></b>" + originalArray.length + "<br>";
+
+    // B. IndexOf
+    document.getElementById("output").innerHTML += "<b><u>Index of 4: </u></b>" + originalArray.indexOf(4) + "<br>";
+
+    // C. Reverse
+    var reversedArray = originalArray.reverse();
+    document.getElementById("output").innerHTML += "<b><u>Reversed Array: </u></b>" + reversedArray + "<br>";
+
+    // D. Concat
+    var newArray = originalArray.concat([6, 7]);
+    document.getElementById("output").innerHTML += "<b><u>Concatenated Array: </u></b>" + newArray + "<br>";
+
+    // E. Push
+    newArray.push(12);
+    document.getElementById("output").innerHTML += "<b><u>Pushed Array: </u></b>" + newArray + "<br>";
+
+    // F. Pop
+    var poppedElement = newArray.pop();
+    document.getElementById("output").innerHTML += "<b><u>Array after popping: </u></b>" + newArray + "<br>";
+    document.getElementById("output").innerHTML += "<b><u>Popped Element: </u></b>" + poppedElement + "<br>";
+
+    // G. Slice
+    var slicedArray = newArray.slice(1, 4);
+    document.getElementById("output").innerHTML += "<b><u>Sliced Array: </u></b>" + slicedArray + "<br>";
+
+    // H. Sort
+    var sortedArray = newArray.slice().sort();
+    document.getElementById("output").innerHTML += "<b><u>Sorted Array: </u></b>" + sortedArray + "<br>";
+</script>
+</body>
+</html>

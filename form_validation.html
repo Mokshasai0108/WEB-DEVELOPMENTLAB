@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form name="registrationForm" onsubmit="return validateForm()">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <span id="emailError"></span><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <span id="passwordError"></span><br>
+
+        <input type="submit" value="Register">
+    </form>
+
+    <script>
+        function validateForm() {
+            // Get form inputs
+            var email = document.forms["registrationForm"]["email"].value;
+            var password = document.forms["registrationForm"]["password"].value;
+
+            // Validate email
+            if (email === "") {
+                document.getElementById("emailError").innerHTML = "Email is required";
+                return false;
+            } else {
+                document.getElementById("emailError").innerHTML = "";
+            }
+
+            // Validate password
+            if (password === "") {
+                document.getElementById("passwordError").innerHTML = "Password is required";
+                return false;
+            } else {
+                document.getElementById("passwordError").innerHTML = "";
+            }
+
+            // Additional password validation
+            if (!validatePassword(password)) {
+                document.getElementById("passwordError").innerHTML = "Password should be at least 6 characters long";
+                return false;
+            } else {
+                document.getElementById("passwordError").innerHTML = "";
+            }
+
+            // Form is valid
+            return true;
+        }
+
+        function validatePassword(password) {
+            return password.length >= 6;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head><title>String Operations</title></head>
+<body>
+<h3>Original String: Lokesh Cinematic Universe</h3>
+<p id="output-paragraph"></p>
+
+<script>
+    var originalString = "Lokesh Cinematic Universe";
+
+    // A. Length
+    document.getElementById("output-paragraph").innerHTML += "<b>String Length:</b> " + originalString.length + "<br>";
+
+    // B. Convert to Uppercase
+    document.getElementById("output-paragraph").innerHTML += "<b>Uppercase String:</b> " + originalString.toUpperCase() + "<br>";
+
+    // C. Convert to Lowercase
+    document.getElementById("output-paragraph").innerHTML += "<b>Lowercase String:</b> " + originalString.toLowerCase() + "<br>";
+
+    // D. Substring
+    document.getElementById("output-paragraph").innerHTML += "<b>Substring (7-11):</b> " + originalString.substring(7, 13) + "<br>";
+
+    // E. Concatenation
+    document.getElementById("output-paragraph").innerHTML += "<b>Concatenated String:</b> " + originalString.concat(", India") + "<br>";
+
+    // F. Replace
+    document.getElementById("output-paragraph").innerHTML += "<b>Replaced String:</b> " + originalString.replace("Lokesh", "Marvel") + "<br>";
+
+    // G. IndexOf
+    document.getElementById("output-paragraph").innerHTML += "<b>Index of 'h':</b> " + originalString.indexOf("h") + "<br>";
+
+    // H. Split
+    var splitArray = originalString.split(" ");
+    document.getElementById("output-paragraph").innerHTML += "<b>Split Array:</b> " + splitArray.join(", ") + "<br>";
+</script>
+</body>
+</html>

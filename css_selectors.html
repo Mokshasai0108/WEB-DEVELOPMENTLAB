@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Selectors Example</title>
+	<style>
+		/* Simple Selectors */
+		h1 {
+			color: red;
+		}
+		#id-selector {
+			color: blue;
+		} 
+		.class-selector {
+			color: green;
+		}
+
+		/* Combinator Selectors */
+		h1 + p {
+			font-size: 20px;
+		}
+		h1 ~ p {
+			font-size: 16px;
+		}
+		h1 > span {
+			font-size: 24px;
+		}
+
+		/* Pseudo-class Selectors */
+		a:hover {
+			color: black;
+		}
+		input:focus {
+			background-color: yellow;
+		}
+		p:first-child {
+			font-weight: bold;
+		}
+
+		/* Pseudo-element Selectors */
+		p::first-letter {
+			font-size: 24px;
+		}
+		p::first-line {
+			font-size: 16px;
+		}
+		p::before {
+			content: "Note: ";
+			font-weight: bold;
+		}
+
+		/* Attribute Selectors */
+		img[alt="example"] {
+			border: 2px solid black;
+		}
+		input[type="text"] {
+			background-color: greenyellow;
+		}
+		a[href^="https"] {
+			color: orange;
+		}
+	</style>
+</head>
+<body>
+	<h1>Simple Selectors</h1>
+	<p id="id-selector">This is a paragraph.</p>
+    <p class="class-selector">This is a paragraph </p>
+
+	<h1>Combinator Selectors</h1>
+	<p>This is a paragraph.</p>
+	<p>This is another paragraph.</p>
+	<h1><span>This is span.</span></h1>
+
+	<h1>Pseudo-class Selectors</h1>
+	<a href="#">This is a link</a>
+	<input type="text" placeholder="This is an input field.">
+	<p>This is the first paragraph.</p>
+	<p>This is the second paragraph.</p>
+
+	<h1>Pseudo-element Selectors</h1>
+	<p>This is a paragraph.</p>
+
+	<h1>Attribute Selectors</h1>
+	<img src="example.jpg" alt="example">
+	<input type="text" placeholder="This is an input field.">
+	<a href="https://www.example.com" >This is a link.</a>
+</body>
+</html>

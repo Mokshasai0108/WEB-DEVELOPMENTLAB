@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dynamic fonts</title>
+        <style>
+            .regText { font: 16pt 'Times New Roman'; }
+            .wordText { font: 30pt 'Arial'; }
+        </style>
+    </head>
+    <body>
+        <p class="regText">"Great people - Great Ideas"
+            <span class="wordText" onmouseover="this.style.color = 'red';
+                           this.style.fontStyle = 'italic';
+                           this.style.fontSize = '24px';"
+                onmouseout="this.style.color = 'blue';
+                         this.style.fontStyle = 'normal';
+                         this.style.fontSize = '16px';">
+                Bhagat Singh & Subhas Chandra Bose             
+            </span>
+            Are Powerful Freedom Fighters in India.
+        </p>
+    </body>
+</html>

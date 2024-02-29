@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dynamic values</title>
+  <script>
+  var helpers = [
+  "Your user ID must have at least six characters",
+  "Your password must have at least six characters and it must include one digit",
+  "This box provides advice on filling out the form on this page. Put the mouse cursor over any input field to get advice"
+];
+
+function messages(adviceNumber) {
+  document.getElementById("adviceBox").value = helpers[adviceNumber];
+}
+
+  </script>
+  <style>
+    #adviceBox {
+      position: absolute;
+      left: 250px;
+      top: 0px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form>
+    <p style="font-weight: bold">
+
+      <label>
+        User ID:
+        <input type="text" onmouseover="messages(0)" onmouseout="messages(2)" />
+      </label>
+
+      <br />
+
+      <label>
+        Password:
+        <input type="password" onmouseover="messages(1)" onmouseout="messages(2)" />
+      </label>
+
+      <br />
+
+      <textarea id="adviceBox" rows="3" cols="58">
+        This box provides advice on filling out the form on this page. Put the mouse cursor over any input field to get advice.
+      </textarea>
+
+      <br /><br />
+
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </p>
+  </form>
+
+</body>
+
+</html>

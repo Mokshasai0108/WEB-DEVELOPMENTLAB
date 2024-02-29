@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head><title>JS dispplaying</title></head>
+<body>
+  <input type="button" value="Alert" onclick="demoA()">
+  <input type="button" value="Console" onclick="demoB()">
+  <input type="button" value="InnerHTML" onclick="demoC()">
+  <input type="button" value="doc.write" onclick="demoD()">
+  <p id="demo"></p>
+  <script>
+    // (A) ALERT
+    function demoA() {
+      window.alert("Your message goes here");
+    }
+
+    // (B) CONSOLE.LOG
+    function demoB() {
+      console.log("This is a message in the console.");
+    }
+    // (C) INNERHTML
+    function demoC() {
+      document.getElementById("demo").innerHTML = "This is a message in the Inner HTML.";
+    }
+    // (D) DOCUMENT.WRITE
+    function demoD() {
+            document.write("This is Document.write().");
+        }
+  </script>
+</body>
+</html>
