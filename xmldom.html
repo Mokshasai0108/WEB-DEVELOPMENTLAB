@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var parser, xmlDoc, x, i, txt;
+var text = "<book>" +
+           "<title>Everyday Italian</title>" +
+           "<author>Giada De Laurentiis</author>" +
+           "<year>2005</year>" +
+           "</book>";
+
+parser = new DOMParser();
+xmlDoc = parser.parseFromString(text, "text/xml");
+
+x = xmlDoc.documentElement.childNodes;
+
+txt = "";
+for (i = 0; i < x.length; i++) {
+  txt += x[i].nodeName + ": " + x[i].textContent + "<br>";
+}
+
+document.getElementById("demo").innerHTML = txt;
+</script>
+
+</body>
+</html>
