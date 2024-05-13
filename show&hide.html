@@ -6,7 +6,7 @@
     <title>Show/Hide Image</title>
     <style>
         #imageContainer {
-            display: none; /* Initially hide the image */
+            display: none;
         }
     </style>
     <script>
@@ -15,10 +15,10 @@
             var image = document.getElementById("myImage");
 
             if (imageContainer.style.display === "none") {
-                imageContainer.style.display = "block"; // Show the image container
-                image.src = "https://placekitten.com/200/300"; // Set the image source if needed
+                imageContainer.style.display = "block";
+                image.src = "https://placekitten.com/200/300";
             } else {
-                imageContainer.style.display = "none"; // Hide the image container
+                imageContainer.style.display = "none";
             }
         }
     </script>

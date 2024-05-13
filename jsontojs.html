@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Creating an Object from a JSON String</title>
+    <title>Json to js</title>
 </head>
 <body>
-<h2>Creating an Object from a JSON String</h2>
+<h2>Json to js</h2>
 
 <p id="demo"></p>
 <script>
-    const jsonString = '{"name":"Moksha","age":20,"city":"Hyderabad"}';
+    const jsonString = '{"name":"Moksha","age":20}';
     const obj = JSON.parse(jsonString);
-    document.getElementById("demo").innerHTML = obj.name + ", " + obj.age + ", " + obj.city;
+    document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
 </script>
 
 </body>
